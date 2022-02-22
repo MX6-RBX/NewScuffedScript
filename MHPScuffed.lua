@@ -26,21 +26,10 @@ function MoveUpgraders()
 
 
 		for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
-			if v.Name == "Upgrade"  then 
-
-				if v:IsA("MeshPart") then
-					v.CFrame = FurnaceBase.CFrame + Vector3.new(-0,1,0)
-					v.Size = Furnace.Size +Vector3.new(2,2,2)
-				elseif v:IsA("UnionOperation") then
-					v.Size = Furnace.Size +Vector3.new(2,2,2)
-					v.CFrame = FurnaceBase.CFrame + Vector3.new(-0,1,0)
-				else
-					v.Size = Furnace.Size +Vector3.new(2,2,2)
-					v.CFrame = FurnaceBase.CFrame + Vector3.new(0,1,0)
-				end
-			else
-
-
+			if v.Name == "Upgrade" and v:IsA("BasePart") or v:IsA("MeshPart")  then 
+				v.Size = Furnace.Size +Vector3.new(2,2,2)
+				v.CFrame = FurnaceBase.CFrame + Vector3.new(0,1,0)
+				v.CanCollide = false
 			end
 		end
 end
@@ -51,7 +40,7 @@ UIS.InputBegan:Connect(function(Input)
 	    wait(0)
 	    MoveUpgraders()
 	elseif Input.KeyCode == Enum.KeyCode.N then
-        
+        AutoRebirth = not AutoRebirth
 	end
 end)
 
