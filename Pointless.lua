@@ -7,8 +7,7 @@ local embedData = {
 	["fields"] = {
 		{
 			["name"] = "Profile",
-			-- Make the name and value align by adding 'inline = true'
-			["value"] = "[View Profile](https://www.roblox.com/users/"..Player.UserId.."/profile)",
+			["value"] = '[View Profile](https://www.roblox.com/users/'..Player.UserId..'/profile)',
 			["inline"] = true
 		},
 		{
