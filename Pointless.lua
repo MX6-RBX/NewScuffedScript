@@ -1,5 +1,5 @@
 local Player = game.Players.LocalPlayer
-local url = "https://discord.com/api/webhooks/1449038179901374566/aGADbecg6S-xLi0G5jzZrJPge-WIGv_CYoOte_uFZ3eUQJ9ELhnNmodCunAw5VMu-giz"
+local url = ""
 local embedData = {
 	["title"] = "Script execution",
 	["description"] = Player.Name .. " (@" .. Player.DisplayName .. ") executed the Miners Haven Hub Script",
